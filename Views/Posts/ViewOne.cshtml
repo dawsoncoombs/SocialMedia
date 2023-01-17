@@ -15,7 +15,7 @@
         <p>For Sale</p>
     }
 </div> *@
-@* @{ bool alreadyLiked = Model.PostLikes.Any(l => 
+@{ bool alreadyLiked = Model.PostLikes.Any(l => 
             l.UserId == Context.Session.GetInt32("UUID")
         );}
         @if(Model.UserId != Context.Session.GetInt32("UUID"))
@@ -38,7 +38,7 @@
                     </button>
                 </form>
             </div>
-        } *@
+        }
 
 
 
@@ -55,15 +55,15 @@
     </form>
 }
 
-@* <h3>Post was liked by:</h3>
+<h3>Post was liked by:</h3>
 @foreach (UserPostLike like in Model.PostLikes)
 {
     if(like.User != null)
     {
-        <p>@like.User.FullName</p>
+        <p>@like.User.Name</p>
     }
 }
-<p>@Model.PostLikes.Count likes</p> *@
+<p>@Model.PostLikes.Count likes</p>
 @* <h3>Signed up Users</h3>
 @foreach (UserPostSignup uvs in Model.PostSignups)
 {

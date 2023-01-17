@@ -23,5 +23,5 @@ public class Post
     public int UserId { get; set; } //must match primary key
     public User? Author { get; set; }
 
-    // public List<UserPostLike> PostLikes { get; set; } = new List<UserPostLike>();
+    public List<UserPostLike> PostLikes { get; set; } = new List<UserPostLike>();
 }

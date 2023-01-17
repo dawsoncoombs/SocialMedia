@@ -68,7 +68,7 @@ public class PostsController : Controller
         List<Post> allPosts = db.Posts
         .OrderByDescending(o => o.CreatedAt)
         .Include(v => v.Author)
-        // .Include(v => v.PostLikes)
+        .Include(v => v.PostLikes)
         .ToList()
         ;
 
@@ -86,8 +86,8 @@ public class PostsController : Controller
 
         Post? Post = db.Posts
         .Include(p => p.Author)
-        // .Include(v => v.PostLikes)
-        //     .ThenInclude(vs => vs.User)
+        .Include(v => v.PostLikes)
+            .ThenInclude(vs => vs.User)
         .FirstOrDefault(v => v.PostId == onePostId);
 
         if (Post == null)
@@ -165,33 +165,33 @@ public class PostsController : Controller
         // return RedirectToAction("Index", "Users");
     }
 
-    // [HttpPost("/posts/{postId}/like")]
-    // public IActionResult Like(int postId)
-    // {
-    //     if (!loggedIn || uid == null)
-    //     {
-    //         return RedirectToAction("Index", "Users");
-    //     }
+    [HttpPost("/posts/{postId}/like")]
+    public IActionResult Like(int postId)
+    {
+        if (!loggedIn || uid == null)
+        {
+            return RedirectToAction("Index", "Users");
+        }
 
-    //     UserPostLike? existingLike = db.UserPostLikes
-    //         .FirstOrDefault(l => l.PostId == postId && l.UserId == (int)uid);
+        UserPostLike? existingLike = db.UserPostLikes
+            .FirstOrDefault(l => l.PostId == postId && l.UserId == (int)uid);
 
-    //         if (existingLike == null)
-    //         {
-    //             UserPostLike newLike = new UserPostLike()
-    //             {
-    //                 UserId = (int)uid,
-    //                 PostId = postId
-    //             };
+            if (existingLike == null)
+            {
+                UserPostLike newLike = new UserPostLike()
+                {
+                    UserId = (int)uid,
+                    PostId = postId
+                };
 
-    //         db.UserPostLikes.Add(newLike);
-    //         }
-    //         else
-    //         {
-    //             db.UserPostLikes.Remove(existingLike);
-    //         }
+            db.UserPostLikes.Add(newLike);
+            }
+            else
+            {
+                db.UserPostLikes.Remove(existingLike);
+            }
 
-    //     db.SaveChanges();
-    //     return RedirectToAction("All");
-    // }
+        db.SaveChanges();
+        return RedirectToAction("All");
+    }
 }

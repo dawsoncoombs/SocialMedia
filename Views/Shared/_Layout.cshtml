@@ -23,7 +23,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            @if (Context.Session.GetInt32("UUID") != null)
+                            {
+                                <li class="nav-item">
+                                    <form asp-controller="Users" asp-action="Logout" method="POST">
+                                        <button class="btn btn-link">
+                                            Logout
+                                        </button>
+                                    </form>
+                                </li>
+                            }
                         </li>
                     </ul>
                 </div>

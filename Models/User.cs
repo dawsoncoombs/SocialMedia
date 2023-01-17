@@ -36,6 +36,6 @@ public class User
 
     List<Post> UserPosts { get; set; } = new List<Post>();
 
-    // public List<UserPostLike> UserLikes { get; set; } = new List<UserPostLike>();
+    public List<UserPostLike> UserLikes { get; set; } = new List<UserPostLike>();
 
 }

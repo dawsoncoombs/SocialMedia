@@ -27,7 +27,7 @@
             } *@
             <small class="text-mutes">Submitted on: @post.CreatedAt</small>
         </div>
-        @* <a
+        <a
         asp-controller="Posts"
         asp-action="GetOnePost"
         asp-route-onePostId="@post.PostId"
@@ -59,7 +59,7 @@
                     </button>
                 </form>
             </div>
-        } *@
+        }
         @if(post.UserId == Context.Session.GetInt32("UUID"))
         {
             <div class="card-footer text-center">
