@@ -11,7 +11,7 @@ public class SocialMediaContext : DbContext
     public SocialMediaContext(DbContextOptions options) : base(options) { }
     // the "Monsters" table name will come from the DbSet property name
     public DbSet<User> Users { get; set; }
-    // public DbSet<Post> Posts { get; set; }
+    public DbSet<Post> Posts { get; set; }
     // public DbSet<UserPostLike> UserPostLikes { get; set; }
 
 }

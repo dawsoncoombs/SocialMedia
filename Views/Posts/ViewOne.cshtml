@@ -1,0 +1,71 @@
+@model Post
+
+<a href="/posts">View all Posts</a>
+
+<h2>@Model.Author.Name</h2>
+<img src="@Model.ImgUrl" alt="related to post." class= "card-img-bottom" />
+<div><p>@Model.Thought</p></div>
+@* <div>
+    @if(@Model.ForSale == false)
+    {
+        <p>Not For Sale</p>
+    }
+        else
+    {
+        <p>For Sale</p>
+    }
+</div> *@
+@* @{ bool alreadyLiked = Model.PostLikes.Any(l => 
+            l.UserId == Context.Session.GetInt32("UUID")
+        );}
+        @if(Model.UserId != Context.Session.GetInt32("UUID"))
+        {
+            <div class="card-footer text-center">
+                <form
+                    asp-controller="Posts"
+                    asp-action="Like"
+                    asp-route-postId="@Model.PostId"
+                    >
+                    <button class="btn btn-outline-info">
+                        @if (alreadyLiked)
+                        {
+                            <span>UnLike</span>
+                        }
+                        else
+                        {
+                            <span>Like</span>
+                        }
+                    </button>
+                </form>
+            </div>
+        } *@
+
+
+
+@if (Model.UserId == Context.Session.GetInt32("UUID"))
+{
+    <a href="/posts/@Model.PostId/edit">Edit</a>
+    <form
+        asp-controller="Posts"
+        asp-action="DeletePost"
+        asp-route-deletedPostId="@Model.PostId"
+        method="POST"
+    >
+        <button class="btn-outline-danger">Delete</button>
+    </form>
+}
+
+@* <h3>Post was liked by:</h3>
+@foreach (UserPostLike like in Model.PostLikes)
+{
+    if(like.User != null)
+    {
+        <p>@like.User.FullName</p>
+    }
+}
+<p>@Model.PostLikes.Count likes</p> *@
+@* <h3>Signed up Users</h3>
+@foreach (UserPostSignup uvs in Model.PostSignups)
+{
+    <p>@uvs.User.FullName</p>
+} *@

@@ -1,0 +1,31 @@
+@model Post
+
+<a href="/posts">View all Posts</a>
+
+<div class="container w-75 mx-auto">
+    <h2 class="text-center">New Post</h2>
+
+    <form
+    class="shadow p-3 rounded"
+    asp-controller="Posts"
+    asp-action="Create"
+    method="POST"
+    >
+
+    <div class="mb-3">
+        <label asp-for="ImgUrl"></label>
+        <span asp-validation-for="ImgUrl" class="text-danger font-weight-bold">
+        </span>
+        <input class="form-control" asp-for="ImgUrl"/>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Thought"></label>
+        <span asp-validation-for="Thought" class="text-danger font-weight-bold">
+        </span>
+        <input class="form-control" asp-for="Thought"/>
+    </div>
+
+    <button class="btn btn-success">Post</button>
+    </form>
+</div>

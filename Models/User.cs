@@ -32,9 +32,9 @@ public class User
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
 
-    // foreign key
+    // Foreign Keys
 
-    // List<Post> UserPosts { get; set; } = new List<Post>();
+    List<Post> UserPosts { get; set; } = new List<Post>();
 
     // public List<UserPostLike> UserLikes { get; set; } = new List<UserPostLike>();
 

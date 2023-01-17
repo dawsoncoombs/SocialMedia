@@ -1,0 +1,73 @@
+@model List<Post>
+
+<a href="/posts/new">Add Posts</a>
+
+<h2 class="text-center">All Posts</h2>
+<hr />
+
+
+@foreach (Post post in Model) {
+    <div class="card shadow rounded mx-auto w-75 mb-3">
+        <h4 class="card-title text-center bg-dark text-light py-2 rounded-top">
+            @if (@post.Author != null){
+                <span> Posted by: @post.Author.Name</span>
+            }
+        </h4>
+
+        <div class= "card-body">
+            <h1>@post.Thought</h1>
+            <img src="@post.ImgUrl" alt="related to post." class= "card-img-top" />
+            @* @if(@post.ForSale == false)
+            {
+                <p>Not For Sale</p>
+            }
+            else
+            {
+                <p>For Sale</p>
+            } *@
+            <small class="text-mutes">Submitted on: @post.CreatedAt</small>
+        </div>
+        @* <a
+        asp-controller="Posts"
+        asp-action="GetOnePost"
+        asp-route-onePostId="@post.PostId"
+        class="btn btn-outline-info"
+        >
+        View Details
+        </a>
+        @{ bool alreadyLiked = post.PostLikes.Any(l => 
+            l.UserId == Context.Session.GetInt32("UUID")
+        );}
+        <p>@post.PostLikes.Count likes</p>
+        @if(post.UserId != Context.Session.GetInt32("UUID"))
+        {
+            <div class="card-footer text-center">
+                <form
+                    asp-controller="Posts"
+                    asp-action="Like"
+                    asp-route-postId="@post.PostId"
+                    >
+                    <button class="btn btn-outline-info">
+                        @if (alreadyLiked)
+                        {
+                            <span>UnLike</span>
+                        }
+                        else
+                        {
+                            <span>Like</span>
+                        }
+                    </button>
+                </form>
+            </div>
+        } *@
+        @if(post.UserId == Context.Session.GetInt32("UUID"))
+        {
+            <div class="card-footer text-center">
+                <a class="btn btn-outline-info mb-1" href="/posts/@post.PostId/edit">Edit</a>
+                <form asp-controller="Posts" asp-action="DeletePost" asp-route-deletedPostId="@post.PostId" method="POST">
+                <button class="btn-outline-danger">Delete</button>
+            </form>
+            </div>
+        }
+    </div>
+}
