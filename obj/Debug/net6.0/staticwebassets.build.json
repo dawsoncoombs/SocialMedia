@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OFnmTCdgtZgsdCwbxuW6UppQWHJ8hkv/AuK3LjpRq3M=",
+  "Hash": "tHtjVJDNnMZPIQnKXdVv/KtN4gruys+/i+MdbGX+tBA=",
   "Source": "SocialMedia",
   "BasePath": "_content/SocialMedia",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\SocialMedia.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\LoginReg.css",
+      "SourceId": "SocialMedia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\",
+      "BasePath": "_content/SocialMedia",
+      "RelativePath": "css/LoginReg.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\LoginReg.css"
+    },
+    {
       "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\site.css",
       "SourceId": "SocialMedia",
       "SourceType": "Discovered",
@@ -66,23 +83,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\style.css",
-      "SourceId": "SocialMedia",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\",
-      "BasePath": "_content/SocialMedia",
-      "RelativePath": "css/style.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\favicon.ico",
