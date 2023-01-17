@@ -16323,6 +16323,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\Views\\Users\\i.cshtml",
+      "TargetPath": "Views\\Users\\i.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

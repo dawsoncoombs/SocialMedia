@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oDfLQvf2tSGPjxu5Hkwx9hQ/6ihhgkP436NQdnHU1AI=",
+  "Hash": "OFnmTCdgtZgsdCwbxuW6UppQWHJ8hkv/AuK3LjpRq3M=",
   "Source": "SocialMedia",
   "BasePath": "_content/SocialMedia",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\style.css",
+      "SourceId": "SocialMedia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\",
+      "BasePath": "_content/SocialMedia",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\favicon.ico",

@@ -1,38 +1,36 @@
 @model User
 
-<form asp-controller="Users" asp-action="Register" method="POST">
-    <div class="mb-3">
+
+<form asp-controller="Users" asp-action="Register" method="POST" class="partial">
+    <h3>Sign Up</h3>
+    <div>
         <label asp-for="Name"></label>
         <span
         asp-validation-for="Name"
-        class="text-danger font-weight-bold"
         ></span>
-        <input asp-for="Name" class="form-control"/>
+        <input asp-for="Name"/>
     </div>
-    <div class="mb-3">
+    <div>
         <label asp-for="Email"></label>
         <span
         asp-validation-for="Email"
-        class="text-danger font-weight-bold"
         ></span>
-        <input asp-for="Email" class="form-control"/>
+        <input asp-for="Email"/>
     </div>
-    <div class="mb-3">
+    <div >
         <label asp-for="Password"></label>
         <span
         asp-validation-for="Password"
-        class="text-danger font-weight-bold"
         ></span>
-        <input asp-for="Password" class="form-control"/>
+        <input asp-for="Password"/>
     </div>
-    <div class="mb-3">
+    <div >
         <label asp-for="ConfirmPassword"></label>
         <span
         asp-validation-for="ConfirmPassword"
-        class="text-danger font-weight-bold"
         ></span>
-        <input asp-for="ConfirmPassword" class="form-control"/>
+        <input asp-for="ConfirmPassword"/>
     </div>
-    <button class="btn btn-outline-primary">Register</button>
+    <button>Sign Up</button>
 
 </form>
