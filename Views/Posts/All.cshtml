@@ -6,7 +6,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <h2 class="text-center" id="feedHeader">Recent " Thoughts "</h2>
- 
+
 
 @foreach (Post post in Model) {
 <div class="container">
@@ -70,12 +70,12 @@
                         Dislikes: @post.PostDislikes.Count
                         </form>
                     </li>
-                    <li class="list-inline-item ml-auto">
-                        <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="#!">
+                    @* <li class="list-inline-item ml-auto">
+                        <a class="u-link-v5 g-color-gray-dark-v4 g-color-primary--hover" href="/posts/{postId}/comment">
                         <i class="fa fa-reply g-pos-rel g-top-1 g-mr-3"></i>
-                        Reply
+                        Comment
                         </a>
-                    </li>
+                    </li> *@
                     </ul>
                 </div>
             </div>

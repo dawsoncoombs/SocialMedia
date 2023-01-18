@@ -227,4 +227,65 @@ public class PostsController : Controller
         db.SaveChanges();
         return RedirectToAction("All");
     }
+
+    [HttpPost("/posts/{postId}/commentPost")]
+    public IActionResult CommentPost(int postId)
+    {
+        if (!loggedIn || uid == null)
+        {
+            return RedirectToAction("Index", "Users");
+        }
+
+        UserPostComment? existingComment = db.UserPostComments
+            .FirstOrDefault(d => d.PostId == postId && d.UserId == (int)uid);
+
+            if (existingComment == null)
+            {
+                UserPostComment newComment = new UserPostComment()
+                {
+                    UserId = (int)uid,
+                    PostId = postId
+                };
+
+            db.UserPostComments.Add(newComment);
+            }
+            else
+            {
+                db.UserPostComments.Remove(existingComment);
+            }
+
+        db.SaveChanges();
+        return RedirectToAction("All");
+    }
+
+    [HttpGet("/posts/{postId}/comment")]
+    public IActionResult Comment()
+    {
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index", "Users");
+        }
+        return View("Comment");
+    }
+
+    // [HttpPost("/posts/{postID}/commentPost")]
+    // public IActionResult commentPost(Post newPost)
+    // {
+    //     if(!loggedIn || uid == null) // add || uid == null to remove lines
+    //     {
+    //         return RedirectToAction("Index", "Users");
+    //     }
+    //     if (!ModelState.IsValid)
+    //     {
+    //         return New();
+    //     }
+
+    //     newPost.UserId = (int)uid;
+
+    //     db.Posts.Add(newPost);
+    //     //db doesnt update until we run save changes
+    //     db.SaveChanges();
+
+    //     return RedirectToAction("All");
+    // }
 }

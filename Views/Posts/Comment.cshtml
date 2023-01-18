@@ -1,0 +1,24 @@
+@model UserPostComment
+
+<a href="/posts">View all Posts</a>
+
+<div class="container w-75 mx-auto">
+    <h2 class="text-center">Leave Your Opinion</h2>
+
+    <form
+    class="shadow p-3 rounded"
+    asp-controller="Posts"
+    asp-action="CommentPost"
+    method="POST"
+    >
+
+    <div class="mb-3">
+        <label asp-for="Opinion"></label>
+        <span asp-validation-for="Opinion" class="text-danger font-weight-bold">
+        </span>
+        <input class="form-control" asp-for="Opinion"/>
+    </div>
+
+    <button class="btn btn-success">Post</button>
+    </form>
+</div>

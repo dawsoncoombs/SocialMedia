@@ -25,4 +25,5 @@ public class Post
 
     public List<UserPostLike> PostLikes { get; set; } = new List<UserPostLike>();
     public List<UserPostDislike> PostDislikes { get; set; } = new List<UserPostDislike>();
+    public List<UserPostComment> PostComments { get; set; } = new List<UserPostComment>();
 }

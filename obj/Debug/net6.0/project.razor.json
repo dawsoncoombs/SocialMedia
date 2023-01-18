@@ -16358,6 +16358,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\Views\\Posts\\Comment.cshtml",
+      "TargetPath": "Views\\Posts\\Comment.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\Views\\Users\\Index.cshtml",
       "TargetPath": "Views\\Users\\Index.cshtml",
       "FileKind": "mvc"
