@@ -49,17 +49,31 @@ body{
 }
 
 .likebtn {
-    padding: 2px;
+    padding: 1px;
     color: rgb(119, 116, 116);
     border: 1.5px solid rgb(160, 160, 160);
 }
 
-.thought {
+.postUser {
     Font-family: Copperplate, Copperplate Gothic, fantasy;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-left: 6px;
 }
 
-.myt {
-    Font-family: 'Brush Script MT', cursive;
+.thoughtText{
+    font-family: “Helvetica Neue”,Helvetica,Arial,sans-serif;
+    Font-size: 20px;
+}
+
+.thoughtHeader {
     font-size: 1.5rem;
+    color: rgb(49, 47, 42);
+    Font-family: Copperplate, Copperplate Gothic, fantasy;
+}
+
+#feedHeader {
+    Font-family: Copperplate, Copperplate Gothic, fantasy;
+    font-size: 3rem;
+    color: #2f3655;
+    background-color: rgb(250, 245, 228);
 }

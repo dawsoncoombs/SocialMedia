@@ -5,8 +5,8 @@
 <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<h2 class="text-center">Thoughts</h2>
-<hr />
+<h2 class="text-center" id="feedHeader">Recent " Thoughts "</h2>
+ 
 
 @foreach (Post post in Model) {
 <div class="container">
@@ -18,13 +18,13 @@
                     <h5 class="h5 g-color-gray-dark-v1 mb-0">
                         <img class="d-flex g-width-50 g-height-50 rounded-circle g-mt-3 g-mr-15" src=@post.Author.ProfileImg alt="ProfileImg">
                         @if (@post.Author != null){
-                        <span>@post.Author.Name</span>
+                        <span class="postUser"><i class="ri-arrow-up-fill"></i> @post.Author.Name</span>
                         }
                     </h5>
                     <span class="g-color-gray-dark-v4 g-font-size-12">Posted: @post.CreatedAt</span>
                     </div><br>
-                    <h6 class="myt">My Thought...</h6>
-                    <p class="thought">" @post.Thought "</p>
+                    <h6 class="thoughtHeader">My Thought...</h6>
+                    <p class="thoughtText">" @post.Thought "</p>
             
                     <ul class="list-inline d-sm-flex my-0">
                     <li class="list-inline-item g-mr-20">
@@ -38,7 +38,8 @@
                             <button class="likebtn">
                                 @if (alreadyLiked)
                                 {
-                                    <i>Unlike</i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-5-9a5 5 0 0 0 10 0h-2a3 3 0 0 1-6 0H7zm1-2a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="rgba(47,204,113,1)"/></svg>
+
                                 }
                                 else
                                 {
@@ -59,7 +60,7 @@
                             <button class="likebtn">
                                 @if (alreadyDisliked)
                                 {
-                                    <i>Unlike</i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-5-5h2a3 3 0 0 1 6 0h2a5 5 0 0 0-10 0zm1-6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm8 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="rgba(231,76,60,1)"/></svg>
                                 }
                                 else
                                 {

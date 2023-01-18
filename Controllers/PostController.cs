@@ -69,6 +69,7 @@ public class PostsController : Controller
         .OrderByDescending(o => o.CreatedAt)
         .Include(v => v.Author)
         .Include(v => v.PostLikes)
+        .Include(v => v.PostDislikes)
         .ToList()
         ;
 
@@ -87,6 +88,8 @@ public class PostsController : Controller
         Post? Post = db.Posts
         .Include(p => p.Author)
         .Include(v => v.PostLikes)
+            .ThenInclude(vs => vs.User)
+        .Include(v => v.PostDislikes)
             .ThenInclude(vs => vs.User)
         .FirstOrDefault(v => v.PostId == onePostId);
 
@@ -204,7 +207,7 @@ public class PostsController : Controller
         }
 
         UserPostDislike? existingDislike = db.UserPostDislikes
-            .FirstOrDefault(l => l.PostId == postId && l.UserId == (int)uid);
+            .FirstOrDefault(d => d.PostId == postId && d.UserId == (int)uid);
 
             if (existingDislike == null)
             {
