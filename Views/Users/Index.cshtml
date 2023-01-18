@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="~/css/LoginReg.css" asp-append-version="true" />
 </head>
     <body>
+        <div class="heading">
+            <h1 class="hThink">"Thinkers"</h1>
+            <img class="imgThink" src="/Images/thinker logo-PhotoRoom.png-PhotoRoom.png" alt="thinker">
+        </div>
         <div class="container">
             <div class="blueBg">
                 <div class="box signin">
@@ -32,14 +36,17 @@
             const signupBtn = document.querySelector('.signupBtn');
             const formBx = document.querySelector('.formBx');
             const body= document.querySelector('body');
+            const hThink= document.querySelector('hThink');
 
             signupBtn.onclick = function(){
                 formBx.classList.add('active')
                 body.classList.add('active')
+                hThink.classList.add('active')
             }
             signinBtn.onclick = function(){
                 formBx.classList.remove('active')
                 body.classList.remove('active')
+                hThink.classList.remove('active')
             }
         </script>
     </body>

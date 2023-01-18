@@ -1,48 +1,80 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand[b-cwonxuylsx] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/* :root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #125e81;
+  --text-secondary: rgb(177, 170, 149);
+  --bg-primary: rgb(177, 170, 149);
+  --bg-secondary: #125e81;
 }
 
-a[b-cwonxuylsx] {
-  color: #0077cc;
+body {
+  color: black;
+  background-color: rgb(177, 170, 149);
+  margin: 0;
+  padding: 0;
 }
 
-.btn-primary[b-cwonxuylsx] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+main {
+  margin-left: 5rem;
+  padding: 1rem;
 }
 
-.nav-pills .nav-link.active[b-cwonxuylsx], .nav-pills .show > .nav-link[b-cwonxuylsx] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
 }
 
-.border-top[b-cwonxuylsx] {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom[b-cwonxuylsx] {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow[b-cwonxuylsx] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-button.accept-policy[b-cwonxuylsx] {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-.footer[b-cwonxuylsx] {
-  position: absolute;
-  bottom: 0;
+.nav-item {
   width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
 }
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link img {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+} */
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --bg-color1: rgb(177, 170, 149);
+  --bg-color2: #125e81;
+  --text-color: #000;
+  --main-color: #fff;
+} */

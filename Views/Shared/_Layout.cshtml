@@ -3,58 +3,51 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - SocialMedia</title>
+    <title>@ViewData["Title"] - "Thinkers"</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="Shared/_Layout.cshtml.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SocialMedia.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
     @if (Context.Session.GetInt32("UUID") != null) {
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SocialMedia</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            @if (Context.Session.GetInt32("UUID") != null)
-                            {
-                                <li class="nav-item">
-                                    <form asp-controller="Users" asp-action="Logout" method="POST">
-                                        <button class="btn btn-link">
-                                            Logout
-                                        </button>
-                                    </form>
-                                </li>
-                            }
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    }
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        <header>
+            <a href="/posts">
+                <img src="/Images/thinker logo-PhotoRoom.png-PhotoRoom.png" alt="Logo" class="logo">
+            </a>
+            
+            <ul class="navba">
+                <li><a href="/posts/new"><i class="ri-chat-new-line"></i>Post a Thought</a></li>
+                <li><a href="/posts/all"><i class="ri-question-answer-line"></i>View Thoughts</a></li>
+            </ul>
 
-    @* <footer class="border-top footer text-muted">
+            <div class="main">
+                <form asp-controller="Users" asp-action="Logout" method="POST">
+                    <button class="logoutBtn">
+                        <i class="ri-logout-box-r-line"></i>
+                    </button>
+                </form>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+        </header>
+    }
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    @if (Context.Session.GetInt32("UUID") != null) {
+    <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - SocialMedia - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - Dawson Coombs - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+    }
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false) *@
+    @await RenderSectionAsync("Scripts", required: false)
+    
 </body>
 </html>

@@ -10,12 +10,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #03a9f4;
+    background: #125e81;
     transition: 0.5s;
 }
 
 body.active {
-    background: #f43648;
+    background: rgb(177, 170, 149);
 }
 
 .container {
@@ -134,7 +134,7 @@ body.active {
 }
 
 .partial button {
-    background: #03a9f4;
+    background: #125e81;
     border: none;
     color: #fff;
     max-width: 100px;
@@ -144,7 +144,7 @@ body.active {
 }
 
 .formBx.active .partial button {
-    background: #f43648;
+    background: rgb(177, 170, 149);
 }
 
 @media (max-width: 991px) {
@@ -178,4 +178,23 @@ body.active {
         left: 0;
         top: 150px;
     }
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+}
+
+.imgThink {
+    max-height: 5rem;
+    margin-left: 1rem;
+}
+
+.heading h1 {
+    font-size: 55px;
+    background-color: rgb(243, 239, 225);
+    color: #293d69;
+    Font-family: Copperplate, Copperplate Gothic, fantasy;
 }

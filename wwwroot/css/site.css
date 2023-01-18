@@ -1,19 +1,135 @@
-html {
-  font-size: 14px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+  --bg-color1: rgb(223, 217, 198);
+  --bg-color2: #125e81;
+  --text-color: #fff;
+  --main-color: #000;
 }
 
 body {
-  margin-bottom: 60px;
+  min-height: 100vh;
+  background: var(--bg-color1);
+  color: var(--text-color);
 }
 
+header {
+  position: relative;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 28px 12%;
+  transition: all .50s ease;
+  background-color: rgb(177, 170, 149);
+  border-bottom: 1px solid white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  max-height: 7rem;
+}
+
+.navba {
+  display: flex;
+}
+
+.navba a {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0px 30px;
+  transition: all .50s ease;
+  text-decoration: none;
+}
+
+.navba a:hover {
+  color: var(--main-color);
+}
+
+.navba a.active {
+  color: var(--main-color);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+}
+
+.main button {
+  margin-right: 25px;
+  margin-left: 10px;
+  color: var(--main-color);
+  background-color: var(--bg-color2);
+  border: .5px solid white;
+  font-weight: 500;
+  font-size: 1.5rem;
+  transition: all .50 ease;
+}
+
+#menu-icon {
+  font-size: 35px;
+  color: var(--text-color);
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  header{
+    padding: 14px 2%;
+    transition: .2s;
+  }
+  .navba a{
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+}
+
+@media (max-width: 1090px) {
+  #menu-icon{
+    display: block;
+  }
+  .navba{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    height: 29vh;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all .50s ease;
+  }
+  .navba a{
+    display: block;
+    margin: 12px 0;
+    padding: 0px 25px;
+    transition: all .50s ease;
+  }
+  .navba a:hover{
+    color: var(--bg-color2);
+    transform: translateY(5px);
+  }
+  .navba a.active{
+    color: var(--text-color);
+  }
+  .navba.open{
+    right: 2%;
+  }
+
+}

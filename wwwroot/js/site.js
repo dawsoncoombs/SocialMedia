@@ -2,3 +2,11 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navba');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navba.classList.toggle('open');
+}
