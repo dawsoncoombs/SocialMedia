@@ -49,6 +49,33 @@ namespace SocialMedia.Migrations
                     b.ToTable("Posts");
                 });
 
+            modelBuilder.Entity("SocialMedia.Models.UserPostDislike", b =>
+                {
+                    b.Property<int>("UserPostDislikeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserPostDislikeId");
+
+                    b.HasIndex("PostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserPostDislikes");
+                });
+
             modelBuilder.Entity("SocialMedia.Models.UserPostLike", b =>
                 {
                     b.Property<int>("UserPostLikeId")
@@ -97,6 +124,10 @@ namespace SocialMedia.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("ProfileImg")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
 
@@ -114,6 +145,25 @@ namespace SocialMedia.Migrations
                         .IsRequired();
 
                     b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("SocialMedia.Models.UserPostDislike", b =>
+                {
+                    b.HasOne("Post", "Post")
+                        .WithMany("PostDislikes")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("User", "User")
+                        .WithMany("UserDislikes")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("SocialMedia.Models.UserPostLike", b =>
@@ -137,11 +187,15 @@ namespace SocialMedia.Migrations
 
             modelBuilder.Entity("Post", b =>
                 {
+                    b.Navigation("PostDislikes");
+
                     b.Navigation("PostLikes");
                 });
 
             modelBuilder.Entity("User", b =>
                 {
+                    b.Navigation("UserDislikes");
+
                     b.Navigation("UserLikes");
                 });
 #pragma warning restore 612, 618

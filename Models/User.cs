@@ -18,6 +18,9 @@ public class User
     [DataType(DataType.EmailAddress)]
     public string Email { get; set; }
 
+    [Display(Name = "Profile Picture")]
+    public string ProfileImg { get; set; }
+
     [Required(ErrorMessage = "is required!")]
     [MinLength(8, ErrorMessage = "must be at least 8 characters!")]
     [DataType(DataType.Password)]
@@ -37,5 +40,6 @@ public class User
     List<Post> UserPosts { get; set; } = new List<Post>();
 
     public List<UserPostLike> UserLikes { get; set; } = new List<UserPostLike>();
+    public List<UserPostDislike> UserDislikes { get; set; } = new List<UserPostDislike>();
 
 }

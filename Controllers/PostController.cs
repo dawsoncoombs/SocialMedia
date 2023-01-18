@@ -194,4 +194,34 @@ public class PostsController : Controller
         db.SaveChanges();
         return RedirectToAction("All");
     }
+
+    [HttpPost("/posts/{postId}/dislike")]
+    public IActionResult Dislike(int postId)
+    {
+        if (!loggedIn || uid == null)
+        {
+            return RedirectToAction("Index", "Users");
+        }
+
+        UserPostDislike? existingDislike = db.UserPostDislikes
+            .FirstOrDefault(l => l.PostId == postId && l.UserId == (int)uid);
+
+            if (existingDislike == null)
+            {
+                UserPostDislike newDislike = new UserPostDislike()
+                {
+                    UserId = (int)uid,
+                    PostId = postId
+                };
+
+            db.UserPostDislikes.Add(newDislike);
+            }
+            else
+            {
+                db.UserPostDislikes.Remove(existingDislike);
+            }
+
+        db.SaveChanges();
+        return RedirectToAction("All");
+    }
 }

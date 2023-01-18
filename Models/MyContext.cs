@@ -13,5 +13,6 @@ public class SocialMediaContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Post> Posts { get; set; }
     public DbSet<UserPostLike> UserPostLikes { get; set; }
+    public DbSet<UserPostDislike> UserPostDislikes { get; set; }
 
 }

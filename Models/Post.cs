@@ -24,4 +24,5 @@ public class Post
     public User? Author { get; set; }
 
     public List<UserPostLike> PostLikes { get; set; } = new List<UserPostLike>();
+    public List<UserPostDislike> PostDislikes { get; set; } = new List<UserPostDislike>();
 }
