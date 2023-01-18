@@ -4,7 +4,7 @@
 // Write your JavaScript code.
 
 let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navba');
+let navba = document.querySelector('.navba');
 
 menu.onclick = () => {
     menu.classList.toggle('bx-x');

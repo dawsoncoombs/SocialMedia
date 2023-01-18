@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Nxj2LvaEJEbzVbb7qsnteaAnvpOqheKWOojFIEtE3dA=",
+  "Hash": "VmQFfH+50L3S9mxdaaZpPZt3UHPx9PKbk5zmhQWEwEE=",
   "Source": "SocialMedia",
   "BasePath": "_content/SocialMedia",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\LoginReg.css"
+    },
+    {
+      "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\Post.css",
+      "SourceId": "SocialMedia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\",
+      "BasePath": "_content/SocialMedia",
+      "RelativePath": "css/Post.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Post.css"
     },
     {
       "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\Site.css",

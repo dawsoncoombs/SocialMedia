@@ -8,15 +8,16 @@
 
 :root {
   --bg-color1: rgb(223, 217, 198);
-  --bg-color2: #125e81;
-  --text-color: #fff;
+  --bg-color2: #2f3655;
+  --text-color1: #fff;
+  --text-color2: #000;
   --main-color: #000;
 }
 
 body {
   min-height: 100vh;
   background: var(--bg-color1);
-  color: var(--text-color);
+  color: var(--text-color2);
 }
 
 header {
@@ -46,7 +47,7 @@ header {
 }
 
 .navba a {
-  color: var(--text-color);
+  color: var(--text-color1);
   font-size: 1.1rem;
   font-weight: 500;
   padding: 5px 0;
@@ -56,7 +57,7 @@ header {
 }
 
 .navba a:hover {
-  color: var(--main-color);
+  color: var(--bg-color2);
 }
 
 .navba a.active {
@@ -71,12 +72,13 @@ header {
 .main button {
   margin-right: 25px;
   margin-left: 10px;
-  color: var(--main-color);
+  color: var(--text-color1);
   background-color: var(--bg-color2);
   border: .5px solid white;
   font-weight: 500;
   font-size: 1.5rem;
   transition: all .50 ease;
+  width: 2.5rem;
 }
 
 #menu-icon {
@@ -101,6 +103,7 @@ header {
 @media (max-width: 1090px) {
   #menu-icon{
     display: block;
+    color: var(--text-color1);
   }
   .navba{
     position: absolute;
@@ -108,7 +111,7 @@ header {
     right: -100%;
     width: 270px;
     height: 29vh;
-    background: var(--main-color);
+    background: var(--bg-color2);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -122,14 +125,36 @@ header {
     transition: all .50s ease;
   }
   .navba a:hover{
-    color: var(--bg-color2);
+    color: rgb(235, 215, 101);
     transform: translateY(5px);
   }
   .navba a.active{
-    color: var(--text-color);
+    color: var(--text-color1);
   }
   .navba.open{
     right: 2%;
   }
+}
 
+.imglogo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--bg-color2);
+}
+
+.logolbl {
+  background-color: var(--bg-color1);
+  margin-left: 1rem;
+  font-weight: 500;
+  font-size: 25px;
+  Font-family: Copperplate, Copperplate Gothic, fantasy;
+}
+
+.logolbl:hover {
+  color: #495380;
+}
+
+.imglogo:hover {
+  color: #495380;
 }

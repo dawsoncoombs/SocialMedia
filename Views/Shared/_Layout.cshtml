@@ -14,13 +14,14 @@
 <body>
     @if (Context.Session.GetInt32("UUID") != null) {
         <header>
-            <a href="/posts">
+            <a href="/posts" class="imglogo">
                 <img src="/Images/thinker logo-PhotoRoom.png-PhotoRoom.png" alt="Logo" class="logo">
+                <label class="logolbl">"Thinkers"</label>
             </a>
             
             <ul class="navba">
-                <li><a href="/posts/new"><i class="ri-chat-new-line"></i>Post a Thought</a></li>
-                <li><a href="/posts/all"><i class="ri-question-answer-line"></i>View Thoughts</a></li>
+                <li><a href="/posts/new"><i class="ri-chat-new-line"></i>     Post a Thought</a></li>
+                <li><a href="/posts/all"><i class="ri-question-answer-line"></i>     View Thoughts</a></li>
             </ul>
 
             <div class="main">

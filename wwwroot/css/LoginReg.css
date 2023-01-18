@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #125e81;
+    background: #2f3655;
     transition: 0.5s;
 }
 
@@ -134,7 +134,7 @@ body.active {
 }
 
 .partial button {
-    background: #125e81;
+    background: #2f3655;
     border: none;
     color: #fff;
     max-width: 100px;
@@ -194,7 +194,7 @@ body.active {
 
 .heading h1 {
     font-size: 55px;
-    background-color: rgb(243, 239, 225);
-    color: #293d69;
+    background-color: #fbf2d5;
+    color: #2f3655;
     Font-family: Copperplate, Copperplate Gothic, fantasy;
 }
