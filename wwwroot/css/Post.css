@@ -76,4 +76,15 @@ body{
     font-size: 3rem;
     color: #2f3655;
     background-color: rgb(250, 245, 228);
+    text-decoration: underline;
+}
+
+
+.editLink {
+    text-decoration: none;
+    color: rgb(175, 161, 84);
+}
+
+.editLink:hover {
+    color: #2f3655;
 }

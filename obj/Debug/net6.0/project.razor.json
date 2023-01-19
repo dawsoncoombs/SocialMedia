@@ -16366,6 +16366,11 @@
       "FilePath": "c:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\Views\\Users\\Index.cshtml",
       "TargetPath": "Views\\Users\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\Views\\Users\\Profile.cshtml",
+      "TargetPath": "Views\\Users\\Profile.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

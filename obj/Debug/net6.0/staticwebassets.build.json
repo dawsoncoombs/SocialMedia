@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VmQFfH+50L3S9mxdaaZpPZt3UHPx9PKbk5zmhQWEwEE=",
+  "Hash": "HiShyIsKu/4S0vJpTFi2FH9TJ8e82pmsvfa+sl+qUz4=",
   "Source": "SocialMedia",
   "BasePath": "_content/SocialMedia",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Post.css"
+    },
+    {
+      "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\ProfilePage.css",
+      "SourceId": "SocialMedia",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\",
+      "BasePath": "_content/SocialMedia",
+      "RelativePath": "css/ProfilePage.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ProfilePage.css"
     },
     {
       "Identity": "C:\\Users\\dawso\\Desktop\\Projects\\SocialMedia\\wwwroot\\css\\Site.css",

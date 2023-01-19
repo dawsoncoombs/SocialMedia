@@ -101,20 +101,20 @@ public class UsersController : Controller
         return RedirectToAction("Index");
     }
 
-    // [HttpGet("/profile")]
-    // public IActionResult Profile()
-    // {
-    //     if(!loggedIn)
-    //     {
-    //         return RedirectToAction("Index");
-    //     }
+    [HttpGet("/profile")]
+    public IActionResult Profile()
+    {
+        if(!loggedIn)
+        {
+            return RedirectToAction("Index");
+        }
 
-    //     User? dbUser = db.Users.Include(u => u.UserPosts).FirstOrDefault(u => u.UserId == uid);
+        User? dbUser = db.Users.Include(u => u.UserPosts).FirstOrDefault(u => u.UserId == uid);
 
-    //     if(dbUser == null)
-    //     {
-    //         return RedirectToAction("Index");
-    //     }
-    //     return View("Profile", dbUser);
-    // }
+        if(dbUser == null)
+        {
+            return RedirectToAction("Index");
+        }
+        return View("Profile", dbUser);
+    }
 }

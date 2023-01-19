@@ -37,7 +37,7 @@ public class User
 
     // Foreign Keys
 
-    List<Post> UserPosts { get; set; } = new List<Post>();
+    public List<UserPost> UserPosts { get; set; } = new List<UserPost>();
 
     public List<UserPostLike> UserLikes { get; set; } = new List<UserPostLike>();
     public List<UserPostDislike> UserDislikes { get; set; } = new List<UserPostDislike>();
