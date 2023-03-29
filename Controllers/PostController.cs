@@ -162,7 +162,7 @@ public class PostsController : Controller
         db.Posts.Update(dbPost);
         db.SaveChanges();
 
-        return RedirectToAction("GetOnePost", new { onePostId = dbPost.PostId });
+        return RedirectToAction("All");
         // return Redirect($"/posts/{dbPost.PostId}");
         // return RedirectToAction("GetOnePost");
         // return RedirectToAction("Index", "Users");

@@ -8,7 +8,7 @@ public class Post
     [Key]// Primary Key
     public int PostId { get; set; } // __ID , __ needs to match the name of the class
 
-    [Display(Name = "Visual Image")]
+    [Display(Name = "Visual Image (Img URL)")]
     public string ImgUrl { get; set; }
 
     [Required(ErrorMessage = "is required")]

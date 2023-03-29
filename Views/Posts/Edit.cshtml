@@ -1,9 +1,7 @@
 @model Post
 
-<a href="/posts">View all Posts</a>
-
 <div class="container w-75 mx-auto">
-    <h2 class="text-center">New Post</h2>
+    <h2 class="text-center">Edit Post</h2>
 
     <form
     class="shadow p-3 rounded"
@@ -12,12 +10,13 @@
     asp-route-postId="@Model.PostId"
     method="POST"
     >
-    @* <div class="mb-3">
+
+    <div class="mb-3">
         <label asp-for="ImgUrl"></label>
         <span asp-validation-for="ImgUrl" class="text-danger font-weight-bold">
         </span>
         <input class="form-control" asp-for="ImgUrl" value="@Model.ImgUrl"/>
-    </div> *@
+    </div>
 
     <div class="mb-3">
         <label asp-for="Thought"></label>
@@ -26,6 +25,6 @@
         <input class="form-control" asp-for="Thought" value="@Model.Thought"/>
     </div>
 
-    <button class="btn btn-success">Update</button>
+    <button class="btn btn-primary">Update</button>
     </form>
 </div>
